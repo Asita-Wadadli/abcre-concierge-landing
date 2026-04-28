@@ -1,0 +1,295 @@
+PARTNERSHIP AGREEMENT
+
+Between
+
+HEMISPHERE CLAW AGENCY
+("Technology Partner")
+Represented by: Vance Joseph
+
+And
+
+ANTIGUANS AND BARBUDANS FOR CONSTITUTIONAL REFORM & EDUCATION (A.B.C.R.E.)
+("Organization Partner")
+Represented by: Ralph Bowen, Esq., President
+
+For the Development and Operation of the
+A.B.C.R.E. CONSTITUTIONAL CONCIERGE
+
+---
+
+DATE: April 28, 2026
+
+---
+
+RECITALS
+
+WHEREAS, Hemisphere Claw Agency and A.B.C.R.E. have an established working relationship built on mutual respect, shared commitment to constitutional reform, and previous successful collaborations;
+
+WHEREAS, Hemisphere Claw Agency has developed the A.B.C.R.E. Constitutional Concierge, an AI-powered constitutional guide for Antigua and Barbuda;
+
+WHEREAS, A.B.C.R.E. seeks to expand its constitutional education mission through technology while generating sustainable revenue;
+
+WHEREAS, both parties wish to formalize their partnership in a manner that preserves A.B.C.R.E.'s independence while leveraging Hemisphere Claw Agency's technical capabilities;
+
+NOW, THEREFORE, in consideration of the mutual covenants contained herein, the parties agree as follows:
+
+---
+
+1. DEFINITIONS
+
+1.1 "Product" means the A.B.C.R.E. Constitutional Concierge, including the Telegram bot, landing page, documentation, and associated technology.
+
+1.2 "Revenue" means all subscription fees collected from users of the Product, net of payment processing fees and refunds.
+
+1.3 "ABCRE Share" means forty percent (40%) of Revenue.
+
+1.4 "Technology Partner Share" means sixty percent (60%) of Revenue.
+
+1.5 "Term" means the duration of this Agreement as specified in Section 8.
+
+---
+
+2. OWNERSHIP AND INTELLECTUAL PROPERTY
+
+2.1 A.B.C.R.E. Ownership
+A.B.C.R.E. retains all rights to:
+(a) Its name, logo, and brand identity
+(b) Content accuracy and constitutional interpretation
+(c) Marketing materials featuring A.B.C.R.E.
+(d) Educational approach and African-centered perspective
+
+2.2 Hemisphere Claw Agency Ownership
+Hemisphere Claw Agency retains all rights to:
+(a) Source code and software architecture
+(b) Technical infrastructure and hosting systems
+(c) Development tools and methodologies
+(d) Improvements and derivative technology
+
+2.3 License Grant
+Hemisphere Claw Agency grants A.B.C.R.E. a non-exclusive, royalty-free license to use the Product for constitutional education in Antigua and Barbuda during the Term.
+
+---
+
+3. FINANCIAL TERMS
+
+3.1 Setup Fee
+A.B.C.R.E. shall pay Hemisphere Claw Agency a one-time setup fee of ONE THOUSAND DOLLARS ($1,000.00 USD) upon execution of this Agreement. This fee covers:
+(a) Initial development (already completed)
+(b) Deployment and configuration
+(c) Staff training and documentation
+(d) Thirty (30) days of post-launch support
+
+3.2 Revenue Sharing
+All Revenue shall be distributed monthly as follows:
+(a) Forty percent (40%) to A.B.C.R.E. ("ABCRE Share")
+(b) Sixty percent (60%) to Hemisphere Claw Agency ("Technology Partner Share")
+
+3.3 Payment Schedule
+(a) Revenue shall be calculated monthly
+(b) Payments shall be made within fifteen (15) days of month-end
+(c) Each payment shall be accompanied by a detailed revenue statement
+(d) Payments shall be made via bank transfer or other mutually agreed method
+
+3.4 Expenses
+Each party shall be responsible for its own operational expenses. Technology Partner shall bear all hosting, maintenance, and development costs. Organization Partner shall bear all marketing and promotional costs unless otherwise agreed.
+
+---
+
+4. RESPONSIBILITIES
+
+4.1 Hemisphere Claw Agency Responsibilities
+(a) Maintain Product availability (99.5% uptime target)
+(b) Provide technical support to users
+(c) Implement security updates and patches
+(d) Develop new features as mutually agreed
+(e) Generate and distribute monthly revenue reports
+(f) Maintain data privacy and security compliance
+
+4.2 A.B.C.R.E. Responsibilities
+(a) Approve all content bearing A.B.C.R.E. branding
+(b) Verify constitutional accuracy of information
+(c) Promote Product to members and supporters
+(d) Provide feedback on user needs and issues
+(e) Designate a point person for coordination
+(f) Maintain its independent organizational identity
+
+---
+
+5. MARKETING AND PROMOTION
+
+5.1 Brand Guidelines
+All marketing materials shall reflect A.B.C.R.E.'s mission, values, and African-centered perspective. Hemisphere Claw Agency shall not use A.B.C.R.E.'s brand in any manner that contradicts these principles.
+
+5.2 Co-Marketing
+Both parties agree to coordinate marketing efforts, including:
+(a) Weekly radio program integration
+(b) Social media promotion
+(c) Email newsletter features
+(d) Event presentations
+
+5.3 Lead Generation
+Email addresses and user data collected through the Product shall be shared with A.B.C.R.E. for membership development purposes, subject to user consent and privacy policies.
+
+---
+
+6. DATA AND PRIVACY
+
+6.1 Data Ownership
+User data belongs to the users. Both parties agree to:
+(a) Comply with applicable data protection laws
+(b) Maintain user privacy and confidentiality
+(c) Not sell user data to third parties
+(d) Provide users with data access and deletion rights
+
+6.2 Analytics
+Aggregated, anonymized usage data may be used for product improvement and reporting to both parties.
+
+---
+
+7. TERM AND TERMINATION
+
+7.1 Initial Term
+This Agreement shall commence on the date first written above and continue for two (2) years ("Initial Term").
+
+7.2 Renewal
+The Agreement shall automatically renew for successive one (1) year periods unless either party provides ninety (90) days written notice of non-renewal.
+
+7.3 Termination for Convenience
+Either party may terminate this Agreement with ninety (90) days written notice.
+
+7.4 Termination for Cause
+Either party may terminate immediately upon:
+(a) Material breach of this Agreement
+(b) Insolvency or bankruptcy
+(c) Failure to cure breach within thirty (30) days of notice
+
+7.5 Effect of Termination
+Upon termination:
+(a) A.B.C.R.E. shall retain all user data
+(b) Hemisphere Claw Agency shall provide transition assistance for sixty (60) days
+(c) All outstanding Revenue shares shall be paid within thirty (30) days
+(d) A.B.C.R.E. may continue using existing content it created
+
+---
+
+8. CONFIDENTIALITY
+
+8.1 Both parties acknowledge they may have access to confidential information. Each party agrees to:
+(a) Maintain confidentiality of proprietary information
+(b) Use confidential information only for purposes of this Agreement
+(c) Not disclose confidential information to third parties without consent
+
+---
+
+9. DISPUTE RESOLUTION
+
+9.1 Negotiation
+Any dispute shall first be addressed through good faith negotiation between the parties.
+
+9.2 Mediation
+If negotiation fails, parties agree to non-binding mediation before pursuing other remedies.
+
+9.3 Governing Law
+This Agreement shall be governed by the laws of Antigua and Barbuda.
+
+---
+
+10. GENERAL PROVISIONS
+
+10.1 Independent Contractors
+Both parties are independent contractors. Nothing in this Agreement creates a partnership, joint venture, or employer-employee relationship.
+
+10.2 Assignment
+Neither party may assign this Agreement without written consent of the other, except that Hemisphere Claw Agency may assign to a successor in connection with a merger or acquisition.
+
+10.3 Entire Agreement
+This Agreement constitutes the entire understanding between the parties and supersedes all prior agreements.
+
+10.4 Amendments
+This Agreement may only be amended by written instrument signed by both parties.
+
+10.5 Severability
+If any provision is found invalid, the remaining provisions shall continue in full force.
+
+10.6 Waiver
+Failure to enforce any provision shall not constitute a waiver of that provision.
+
+10.7 Notices
+All notices shall be in writing and sent to the addresses first written above, or such other addresses as either party may designate.
+
+---
+
+SIGNATURES
+
+IN WITNESS WHEREOF, the parties have executed this Agreement as of the date first written above.
+
+
+HEMISPHERE CLAW AGENCY
+
+By: ___________________________
+Vance Joseph
+
+Date: _________________________
+
+
+A.B.C.R.E.
+
+By: ___________________________
+Ralph Bowen, Esq.
+President
+
+Date: _________________________
+
+
+WITNESS:
+
+_______________________________
+[Name]
+
+Date: _________________________
+
+---
+
+SCHEDULE A: PRICING TIERS
+
+| Tier | Monthly Price | Target User | ABCRE Share |
+|------|---------------|-------------|-------------|
+| Citizen Basic | $4.99 | Individual citizens | $2.00 (40%) |
+| Citizen Pro | $14.99 | Activists, journalists | $6.00 (40%) |
+| Organization | $49.99 | NGOs, community groups | $20.00 (40%) |
+| Institution | $149.99 | Government, universities | $60.00 (40%) |
+
+---
+
+SCHEDULE B: SUCCESS METRICS
+
+6-Month Targets:
+- 500 bot users
+- 300 email subscribers
+- 50 Active Members
+- $3,000 ABCRE revenue
+
+12-Month Targets:
+- 2,000 bot users
+- 1,000 email subscribers
+- 200 Active Members
+- $7,200 ABCRE revenue
+
+---
+
+SCHEDULE C: TECHNICAL SPECIFICATIONS
+
+Product Components:
+1. Telegram Bot (@abcre_constitution_bot)
+2. Landing Page (GitHub Pages hosted)
+3. Constitution Database (532 sections)
+4. Payment Processing (Stripe)
+5. Email Service (to be configured)
+
+Hosting: Vercel / GitHub Pages
+Uptime Target: 99.5%
+Support: Business hours (Atlantic Time)
+
+---
+
+END OF AGREEMENT
