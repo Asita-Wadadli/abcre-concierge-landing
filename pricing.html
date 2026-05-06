@@ -25,10 +25,28 @@
             padding: 40px 20px;
         }
         
+        .back-link {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            transition: opacity 0.3s;
+        }
+        
+        .back-link:hover {
+            opacity: 0.8;
+        }
+        
         header {
             text-align: center;
             color: white;
             margin-bottom: 50px;
+            position: relative;
         }
         
         .flag {
@@ -280,6 +298,7 @@
 <body>
     <div class="container">
         <header>
+            <a href="index.html" class="back-link">← Back to Home</a>
             <div class="flag">🇦🇬</div>
             <h1>A.B.C.R.E. Constitutional Concierge</h1>
             <p class="subtitle">AI-powered constitutional guide for Antigua and Barbuda. Know your rights, understand your government, participate in democracy.</p>
