@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>A.B.C.R.E. Constitutional Concierge - Know Your Constitution</title>
+    <meta name="description" content="AI-powered constitutional guide for Antigua and Barbuda. Know your rights, understand your government, participate in reform.">
     <style>
         * {
             margin: 0;
@@ -11,466 +12,586 @@
             box-sizing: border-box;
         }
         
+        :root {
+            --primary: #1e3c72;
+            --primary-light: #2a5298;
+            --accent: #ffd700;
+            --text: #333;
+            --text-light: #666;
+            --bg: #f8f9fa;
+            --white: #ffffff;
+            --warning: #ff6b6b;
+        }
+        
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
-            min-height: 100vh;
-            color: #333;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             line-height: 1.6;
+            color: var(--text);
         }
         
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
-        
-        header {
+        /* Welcome Banner */
+        .welcome-banner {
+            background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+            color: var(--text);
+            padding: 1rem;
             text-align: center;
-            color: white;
-            margin-bottom: 50px;
+            font-weight: bold;
         }
         
-        .flag {
-            font-size: 64px;
-            margin-bottom: 20px;
+        /* Navigation */
+        nav {
+            background: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
         
-        h1 {
-            font-size: 36px;
-            margin-bottom: 10px;
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
         
-        .subtitle {
-            font-size: 20px;
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: bold;
+            font-size: 1.2rem;
+            color: var(--primary);
+        }
+        
+        .logo-flag {
+            font-size: 1.5rem;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+        
+        .nav-cta {
+            background: var(--primary);
+            color: var(--white) !important;
+            padding: 0.5rem 1.5rem;
+            border-radius: 25px;
+            transition: background 0.3s;
+        }
+        
+        .nav-cta:hover {
+            background: var(--primary-light);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: var(--white);
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero-flag {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.2rem;
             opacity: 0.9;
+            margin-bottom: 2rem;
+        }
+        
+        .hero-cta {
+            display: inline-flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .btn {
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .btn-primary {
+            background: var(--accent);
+            color: var(--text);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+        
+        .btn-secondary:hover {
+            background: var(--white);
+            color: var(--primary);
+        }
+        
+        /* Welcome Section */
+        .welcome {
+            padding: 4rem 2rem;
+            background: var(--white);
+        }
+        
+        .welcome-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .abcre-logo {
+            width: 150px;
+            height: 150px;
+            margin: 0 auto 1rem;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        }
+        
+        .welcome h2 {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+        }
+        
+        .welcome-message {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            line-height: 1.8;
+        }
+        
+        .welcome-message strong {
+            color: var(--primary);
+        }
+        
+        /* Who Is It For Section */
+        .audience {
+            padding: 4rem 2rem;
+            background: var(--bg);
+        }
+        
+        .audience-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .audience h2 {
+            text-align: center;
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 3rem;
+        }
+        
+        .audience-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .audience-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+        
+        .audience-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .audience-card h3 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+        
+        .audience-card p {
+            color: var(--text-light);
+        }
+        
+        /* How It Works Section */
+        .how-it-works {
+            padding: 4rem 2rem;
+            background: var(--white);
+        }
+        
+        .how-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .how-it-works h2 {
+            text-align: center;
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 3rem;
+        }
+        
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .step {
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background: var(--primary);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 0 auto 1rem;
+        }
+        
+        .step h3 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Disclaimer Section */
+        .disclaimer {
+            padding: 3rem 2rem;
+            background: #fff3cd;
+            border-top: 4px solid var(--accent);
+        }
+        
+        .disclaimer-container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .disclaimer h3 {
+            color: var(--text);
+            margin-bottom: 1rem;
+        }
+        
+        .disclaimer p {
+            color: var(--text-light);
+            margin-bottom: 1rem;
+        }
+        
+        .disclaimer strong {
+            color: var(--warning);
+        }
+        
+        /* CTA Section */
+        .cta {
+            padding: 4rem 2rem;
+            text-align: center;
+            background: var(--bg);
+        }
+        
+        .cta-container {
             max-width: 600px;
             margin: 0 auto;
         }
         
-        .pricing-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-            margin-bottom: 50px;
+        .cta h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
         }
         
-        .pricing-card {
-            background: white;
-            border-radius: 16px;
-            padding: 30px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
-            transition: transform 0.3s, box-shadow 0.3s;
-            display: flex;
-            flex-direction: column;
+        .cta p {
+            color: var(--text-light);
+            margin-bottom: 2rem;
         }
         
-        .pricing-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 50px rgba(0,0,0,0.3);
-        }
-        
-        .pricing-card.featured {
-            border: 3px solid #ffd700;
-            position: relative;
-            transform: scale(1.05);
-        }
-        
-        .pricing-card.featured:hover {
-            transform: scale(1.05) translateY(-5px);
-        }
-        
-        .pricing-card.featured::before {
-            content: "MOST POPULAR";
-            position: absolute;
-            top: -12px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: #ffd700;
-            color: #333;
-            padding: 4px 16px;
-            border-radius: 20px;
-            font-size: 12px;
-            font-weight: bold;
-        }
-        
-        .tier-badge {
-            font-size: 24px;
-            margin-bottom: 10px;
-        }
-        
-        .tier-name {
-            font-size: 22px;
-            font-weight: bold;
-            margin-bottom: 5px;
-            color: #1e3c72;
-        }
-        
-        .tier-price {
-            font-size: 42px;
-            font-weight: bold;
-            color: #2a5298;
-            margin-bottom: 5px;
-        }
-        
-        .tier-period {
-            color: #666;
-            margin-bottom: 20px;
-            font-size: 14px;
-        }
-        
-        .features {
-            list-style: none;
-            margin-bottom: 25px;
-            flex-grow: 1;
-        }
-        
-        .features li {
-            padding: 10px 0;
-            border-bottom: 1px solid #eee;
-            font-size: 14px;
-        }
-        
-        .features li::before {
-            content: "✓ ";
-            color: #2a5298;
-            font-weight: bold;
-        }
-        
-        .features li.included::before {
-            content: "✓ ";
-            color: #28a745;
-        }
-        
-        .features li.not-included {
-            color: #999;
-        }
-        
-        .features li.not-included::before {
-            content: "✗ ";
-            color: #dc3545;
-        }
-        
-        .btn {
-            display: block;
-            width: 100%;
-            padding: 15px;
-            background: linear-gradient(135deg, #2a5298 0%, #1e3c72 100%);
-            color: white;
-            text-align: center;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: bold;
-            transition: opacity 0.3s, transform 0.2s;
-            margin-top: auto;
-        }
-        
-        .btn:hover {
-            opacity: 0.9;
-            transform: scale(1.02);
-        }
-        
-        .btn-featured {
-            background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
-            color: #333;
-        }
-        
-        .comparison-section {
-            background: white;
-            border-radius: 16px;
-            padding: 40px;
-            margin-bottom: 40px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
-        }
-        
-        .comparison-section h2 {
-            text-align: center;
-            margin-bottom: 30px;
-            color: #1e3c72;
-        }
-        
-        .comparison-table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        
-        .comparison-table th,
-        .comparison-table td {
-            padding: 15px;
-            text-align: left;
-            border-bottom: 1px solid #eee;
-        }
-        
-        .comparison-table th {
-            background: #f8f9fa;
-            font-weight: bold;
-            color: #1e3c72;
-        }
-        
-        .comparison-table td:first-child {
-            font-weight: 500;
-        }
-        
-        .check {
-            color: #28a745;
-            font-weight: bold;
-        }
-        
-        .cross {
-            color: #dc3545;
-        }
-        
-        .telegram-section {
-            background: white;
-            border-radius: 16px;
-            padding: 40px;
-            text-align: center;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
-            margin-bottom: 40px;
-        }
-        
-        .telegram-icon {
-            font-size: 48px;
-            margin-bottom: 20px;
-        }
-        
-        .revenue-notice {
-            background: rgba(255, 215, 0, 0.1);
-            border: 2px solid #ffd700;
-            border-radius: 12px;
-            padding: 20px;
-            margin: 30px 0;
-            text-align: center;
-            color: white;
-        }
-        
-        .revenue-notice strong {
-            color: #ffd700;
-        }
-        
+        /* Footer */
         footer {
-            text-align: center;
-            color: white;
-            margin-top: 40px;
-            opacity: 0.9;
+            background: var(--text);
+            color: var(--white);
+            padding: 3rem 2rem 1rem;
         }
         
-        footer a {
-            color: #ffd700;
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-section h3 {
+            margin-bottom: 1rem;
+            color: var(--accent);
+        }
+        
+        .footer-section a {
+            color: #aaa;
             text-decoration: none;
+            display: block;
+            padding: 0.3rem 0;
+            transition: color 0.3s;
         }
         
-        footer a:hover {
-            text-decoration: underline;
+        .footer-section a:hover {
+            color: var(--white);
         }
         
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #444;
+            color: #888;
+        }
+        
+        /* Mobile Responsive */
         @media (max-width: 768px) {
-            .pricing-card.featured {
-                transform: none;
+            .nav-links {
+                display: none;
             }
-            .pricing-card.featured:hover {
-                transform: translateY(-5px);
+            
+            .hero h1 {
+                font-size: 1.8rem;
             }
-            h1 {
-                font-size: 28px;
+            
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+            
+            .pricing-grid,
+            .audience-grid,
+            .steps {
+                grid-template-columns: 1fr;
             }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <div class="flag">🇦🇬</div>
-            <h1>A.B.C.R.E. Constitutional Concierge</h1>
-            <p class="subtitle">AI-powered constitutional guide for Antigua and Barbuda. Know your rights, understand your government, participate in democracy.</p>
-        </header>
-
-        <div class="pricing-grid">
-            <!-- Citizen Basic -->
-            <div class="pricing-card">
-                <div class="tier-badge">🇦🇬</div>
-                <div class="tier-name">Citizen Basic</div>
-                <div class="tier-price">$4.99</div>
-                <div class="tier-period">per month</div>
-                <ul class="features">
-                    <li>Unlimited Constitution searches</li>
-                    <li>Section-by-section lookup</li>
-                    <li>Fundamental rights guide</li>
-                    <li>Government structure info</li>
-                    <li>Telegram bot access</li>
-                    <li class="not-included">Plain English explanations</li>
-                    <li class="not-included">African-centered analysis</li>
-                </ul>
-                <a href="https://buy.stripe.com/dRm9AT88KdG64f09MTffy0B" class="btn">Subscribe - $4.99/mo</a>
-            </div>
-
-            <!-- Citizen Pro - Featured -->
-            <div class="pricing-card featured">
-                <div class="tier-badge">🇦🇬</div>
-                <div class="tier-name">Citizen Pro</div>
-                <div class="tier-price">$14.99</div>
-                <div class="tier-period">per month</div>
-                <ul class="features">
-                    <li class="included">Everything in Basic</li>
-                    <li class="included">Plain English translations</li>
-                    <li class="included">Historical context & Hansard</li>
-                    <li class="included">Reform tracking & alerts</li>
-                    <li class="included">Citation generator</li>
-                    <li class="included">Web widget access</li>
-                    <li class="included"><strong>African-centered analysis</strong></li>
-                </ul>
-                <a href="https://buy.stripe.com/4gMdR94Wy0Tkh1M8IPffy0C" class="btn btn-featured">Subscribe - $14.99/mo</a>
-            </div>
-
-            <!-- Organization -->
-            <div class="pricing-card">
-                <div class="tier-badge">🏛️</div>
-                <div class="tier-name">Organization</div>
-                <div class="tier-price">$49.99</div>
-                <div class="tier-period">per month</div>
-                <ul class="features">
-                    <li>Everything in Pro</li>
-                    <li><strong>5 team members</strong></li>
-                    <li>WhatsApp integration</li>
-                    <li>Priority support</li>
-                    <li>Custom alerts</li>
-                    <li>Downloadable reports</li>
-                </ul>
-                <a href="https://buy.stripe.com/28E5kDdt4gSi12O9MTffy0D" class="btn">Subscribe - $49.99/mo</a>
-            </div>
-
-            <!-- Institution -->
-            <div class="pricing-card">
-                <div class="tier-badge">🏢</div>
-                <div class="tier-name">Institution</div>
-                <div class="tier-price">$149.99</div>
-                <div class="tier-period">per month</div>
-                <ul class="features">
-                    <li>Everything in Organization</li>
-                    <li><strong>Unlimited team members</strong></li>
-                    <li>API access</li>
-                    <li>White-label option</li>
-                    <li>Dedicated support</li>
-                    <li>Custom training</li>
-                </ul>
-                <a href="https://buy.stripe.com/14A8wPagS59A5j44szffy0E" class="btn">Subscribe - $149.99/mo</a>
-            </div>
-        </div>
-
-        <!-- Feature Comparison Table -->
-        <div class="comparison-section">
-            <h2>📊 Feature Comparison</h2>
-            <table class="comparison-table">
-                <thead>
-                    <tr>
-                        <th>Feature</th>
-                        <th>Free</th>
-                        <th>Basic</th>
-                        <th>Pro</th>
-                        <th>Org/Inst</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Daily Queries</td>
-                        <td>3</td>
-                        <td class="check">Unlimited</td>
-                        <td class="check">Unlimited</td>
-                        <td class="check">Unlimited</td>
-                    </tr>
-                    <tr>
-                        <td>Constitution Search</td>
-                        <td class="check">✓</td>
-                        <td class="check">✓</td>
-                        <td class="check">✓</td>
-                        <td class="check">✓</td>
-                    </tr>
-                    <tr>
-                        <td>Section Lookup</td>
-                        <td>Limited</td>
-                        <td class="check">Full</td>
-                        <td class="check">Full</td>
-                        <td class="check">Full</td>
-                    </tr>
-                    <tr>
-                        <td>Plain English Explanations</td>
-                        <td class="cross">✗</td>
-                        <td class="cross">✗</td>
-                        <td class="check">✓</td>
-                        <td class="check">✓</td>
-                    </tr>
-                    <tr>
-                        <td>African-Centered Analysis</td>
-                        <td class="cross">✗</td>
-                        <td class="cross">✗</td>
-                        <td class="check">✓</td>
-                        <td class="check">✓</td>
-                    </tr>
-                    <tr>
-                        <td>Historical Context</td>
-                        <td class="cross">✗</td>
-                        <td class="cross">✗</td>
-                        <td class="check">✓</td>
-                        <td class="check">✓</td>
-                    </tr>
-                    <tr>
-                        <td>Reform Tracking</td>
-                        <td class="cross">✗</td>
-                        <td class="cross">✗</td>
-                        <td class="check">✓</td>
-                        <td class="check">✓</td>
-                    </tr>
-                    <tr>
-                        <td>Team Members</td>
-                        <td>1</td>
-                        <td>1</td>
-                        <td>1</td>
-                        <td class="check">5+</td>
-                    </tr>
-                    <tr>
-                        <td>WhatsApp Integration</td>
-                        <td class="cross">✗</td>
-                        <td class="cross">✗</td>
-                        <td class="cross">✗</td>
-                        <td class="check">✓</td>
-                    </tr>
-                    <tr>
-                        <td>API Access</td>
-                        <td class="cross">✗</td>
-                        <td class="cross">✗</td>
-                        <td class="cross">✗</td>
-                        <td class="check">✓</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-        <!-- Free Trial Section -->
-        <div class="telegram-section">
-            <div class="telegram-icon">📱</div>
-            <h2>Try It Free on Telegram</h2>
-            <p style="margin: 20px 0; font-size: 18px;">Get 3 free queries per day. No credit card required.</p>
-            <a href="https://t.me/abcre_constitution_bot?start=landing" class="btn" style="max-width: 350px; margin: 0 auto; font-size: 18px;">
-                🇦🇬 Start Your Free Trial
-            </a>
-        </div>
-
-        <!-- Revenue Notice -->
-        <div class="revenue-notice">
-            <strong>🤝 Supporting Constitutional Reform</strong><br>
-            40% of every subscription goes directly to A.B.C.R.E. to support their constitutional reform and education work in Antigua and Barbuda.
-        </div>
-
-        <footer>
-            <p>Built for <a href="https://myabcre.org">A.B.C.R.E.</a> by Hemisphere Claw Agency</p>
-            <p style="margin-top: 15px;">
-                <a href="https://t.me/abcre_constitution_bot">Telegram Bot</a> | 
-                <a href="mailto:info@myabcre.org">Contact A.B.C.R.E.</a>
-            </p>
-            <p style="margin-top: 15px; font-size: 14px; opacity: 0.8;">
-                © 2026 A.B.C.R.E. Constitutional Concierge. All rights reserved.
-            </p>
-        </footer>
+    <!-- Welcome Banner -->
+    <div class="welcome-banner">
+        🎉 Welcome to the A.B.C.R.E. Constitutional Concierge — Your AI Guide to the Constitution of Antigua and Barbuda!
     </div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-flag">🇦🇬</span>
+                <span>A.B.C.R.E. Concierge</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#audience">Who It's For</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="https://t.me/abcre_constitution_bot" class="nav-cta">Try Free</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-flag">🇦🇬</div>
+            <h1>Know Your Constitution.<br>Know Your Rights.</h1>
+            <p class="hero-subtitle">AI-powered constitutional guide for Antigua and Barbuda. Instant answers, 24/7 availability, African-centered perspective.</p>
+            <div class="hero-cta">
+                <a href="https://t.me/abcre_constitution_bot" class="btn btn-primary">🇦🇬 Start on Telegram - Free</a>
+                <a href="pricing.html" class="btn btn-secondary">View Pricing</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Welcome Section -->
+    <section class="welcome" id="about">
+        <div class="welcome-container">
+            <img src="abcre-logo.jpg" alt="A.B.C.R.E. Logo" class="abcre-logo">
+            <h2>A Message from A.B.C.R.E.</h2>
+            <div class="welcome-message">
+                <p><strong>Know Your Constitution, Own Your Freedom</strong></p>
+                <br>
+                <p>Antiguans and Barbudans for Constitutional Reform & Education (A.B.C.R.E.) is a not-for-profit, volunteer-based organization, dedicated to educating citizens and residents about the freedoms, rights, and obligations provided under the Constitution.</p>
+                <br>
+                <p>As an NGO, we find creative ways to approach constitutional education, applying its contents to current events, encouraging conversation and exchange of ideas.</p>
+                <br>
+                <p><strong>The A.B.C.R.E. Constitutional Concierge</strong> is our latest innovation — an AI-powered tool that makes the Constitution accessible to everyone, 24/7.</p>
+                <br>
+                <p><strong>40% of every subscription supports A.B.C.R.E.'s constitutional reform work.</strong> By using this tool, you're not just learning — you're contributing to the future of our nation.</p>
+                <br>
+                <p>Join the conversation by using the Concierge, liking us on Facebook, or subscribing to our newsletter.</p>
+                <br>
+                <p><strong>— The A.B.C.R.E. Team</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Who Is It For Section -->
+    <section class="audience" id="audience">
+        <div class="audience-container">
+            <h2>Who Is This For?</h2>
+            <div class="audience-grid">
+                <div class="audience-card">
+                    <div class="audience-icon">👨‍👩‍👧‍👦</div>
+                    <h3>Everyday Citizens</h3>
+                    <p>Know your rights. Understand your government. Participate in democracy. Perfect for anyone who wants to be an informed citizen.</p>
+                </div>
+                <div class="audience-card">
+                    <div class="audience-icon">🎓</div>
+                    <h3>Students & Teachers</h3>
+                    <p>Learn constitutional law in plain English. Great for civics classes, research projects, and understanding your rights as a young citizen.</p>
+                </div>
+                <div class="audience-card">
+                    <div class="audience-icon">📢</div>
+                    <h3>Activists & Advocates</h3>
+                    <p>Arm yourself with constitutional knowledge. Fight for change with the full text of the law at your fingertips.</p>
+                </div>
+                <div class="audience-card">
+                    <div class="audience-icon">📰</div>
+                    <h3>Journalists & Media</h3>
+                    <p>Quickly verify constitutional provisions. Get citations for your reporting. Understand the legal framework.</p>
+                </div>
+                <div class="audience-card">
+                    <div class="audience-icon">🏛️</div>
+                    <h3>NGOs & Organizations</h3>
+                    <p>Train your team on constitutional rights. Access legal information for your advocacy work.</p>
+                </div>
+                <div class="audience-card">
+                    <div class="audience-icon">⚖️</div>
+                    <h3>Legal Professionals</h3>
+                    <p>Quick reference tool. Plain English explanations for clients. Citation generator for documents.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works" id="how-it-works">
+        <div class="how-container">
+            <h2>How It Works</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Start the Bot</h3>
+                    <p>Click the button below or search for <strong>@abcre_constitution_bot</strong> on Telegram. Tap "Start" to begin.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Ask Questions</h3>
+                    <p>Use natural language: <em>"What are my rights?"</em> or commands: <em>/section 12</em>. The bot understands both!</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Get Answers</h3>
+                    <p>Receive instant responses with constitutional text, plain English explanations, and African-centered perspectives.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Learn & Share</h3>
+                    <p>Deepen your understanding. Share with friends and family. Upgrade to Premium for unlimited access.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Disclaimer Section -->
+    <section class="disclaimer">
+        <div class="disclaimer-container">
+            <h3>⚠️ Important Disclaimer</h3>
+            <p><strong>This tool provides educational information about the Constitution of Antigua and Barbuda.</strong></p>
+            <p>It is <strong>NOT legal advice</strong>. While we strive for accuracy, always consult the official constitutional text and qualified legal professionals for legal matters.</p>
+            <p>The African-centered perspective offered is for educational and cultural context and does not replace legal interpretation.</p>
+            <p><strong>For legal emergencies:</strong> Contact a lawyer or visit your nearest police station.</p>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="cta-container">
+            <h2>Ready to Know Your Constitution?</h2>
+            <p>Join thousands of Antiguan and Barbudan citizens who are discovering their rights and understanding their government.</p>
+            <a href="https://t.me/abcre_constitution_bot" class="btn btn-primary" style="font-size: 1.2rem; padding: 1.2rem 3rem;">🇦🇬 Start Free on Telegram</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Product</h3>
+                <a href="#about">About</a>
+                <a href="pricing.html">Pricing</a>
+                <a href="https://t.me/abcre_constitution_bot">Telegram Bot</a>
+                <a href="#">User Guide</a>
+            </div>
+            <div class="footer-section">
+                <h3>Resources</h3>
+                <a href="https://myabcre.org">A.B.C.R.E. Website</a>
+                <a href="#">FAQ</a>
+                <a href="#">Documentation</a>
+            </div>
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <a href="#">Terms of Service</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Disclaimer</a>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <a href="mailto:kofiadmn@agentmail.to">Hemisphere Claw Agency</a>
+                <a href="mailto:bandelee@gmail.com">bandelee@gmail.com</a>
+                <a href="mailto:abcre@myabcre.org">A.B.C.R.E.</a>
+                <a href="https://t.me/abcre_constitution_bot">@abcre_constitution_bot</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 A.B.C.R.E. Constitutional Concierge. Built with ❤️ by Hemisphere Claw Agency.</p>
+            <p style="margin-top: 0.5rem;">40% of all subscriptions support constitutional reform in Antigua and Barbuda.</p>
+        </div>
+    </footer>
 </body>
 </html>
